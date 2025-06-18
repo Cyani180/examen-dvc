@@ -6,14 +6,20 @@ env/
 __pycache__/
 *.py[cod]
 
-# DVC cache (usually not ignored unless you want to exclude the local cache)
+# DVC cache (optional: only ignore if you don't want to store it locally)
 .dvc/cache/
 
-# Raw and cleaned data tracked by DVC
-data/raw_data.csv
-data/clean_data.csv
+# Data tracked by DVC
+data/raw/raw.csv
+data/processed/X_train.csv
+data/processed/X_test.csv
+data/processed/X_train_scaled.csv
+data/processed/X_test_scaled.csv
+data/processed/y_train.csv
+data/processed/y_test.csv
+data/processed/predictions.csv
 
-# Models (.pkl), tracked by DVC
+# Models (.pkl), also managed by DVC
 models/*.pkl
 
 # Logs and temporary files
