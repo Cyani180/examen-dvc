@@ -1,2 +1,24 @@
-/venv
-/clean_data.csv
+# Python virtual environments
+venv/
+env/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# DVC cache (usually not ignored unless you want to exclude the local cache)
+.dvc/cache/
+
+# Raw and cleaned data tracked by DVC
+data/raw_data.csv
+data/clean_data.csv
+
+# Models (.pkl), tracked by DVC
+models/*.pkl
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
