@@ -35,7 +35,7 @@ stages:
     - models/model.pkl
     - src/models/evaluate_model.py
     outs:
-    - metrics/metrics.json
+    - metrics/scores.json
   scale:
     cmd: d data/processed/X_train.csv -d data/processed/X_test.csv -o 
       data/processed/X_train_scaled.csv -o data/processed/X_test_scaled.csv 
