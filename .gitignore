@@ -28,3 +28,4 @@ models/*.pkl
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+myenv/
