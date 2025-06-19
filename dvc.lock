@@ -100,3 +100,27 @@ stages:
       hash: md5
       md5: 63eb1e669fc62d3a081faa689b157ce6
       size: 53
+  scale:
+    cmd: python src/data/scale_data.py
+    deps:
+    - path: data/processed/X_test.csv
+      hash: md5
+      md5: b6c2910e3b3fc562c5b516b63fc3e22c
+      size: 59909
+    - path: data/processed/X_train.csv
+      hash: md5
+      md5: ef01f67c035349e375300528a99938f5
+      size: 238533
+    - path: src/data/scale_data.py
+      hash: md5
+      md5: 819aa44de52dbaef933f05bf692f0eb5
+      size: 1088
+    outs:
+    - path: data/processed/X_test_scaled.csv
+      hash: md5
+      md5: 5e079189af6bd091d651a89fafb1c290
+      size: 57026
+    - path: data/processed/X_train_scaled.csv
+      hash: md5
+      md5: c1b80eb7f083888b625dd0369cf381f8
+      size: 227497

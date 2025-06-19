@@ -12,6 +12,16 @@ def main():
     X_train = pd.read_csv(X_train_path)
     X_test = pd.read_csv(X_test_path)
 
+    print("Daten-Typen von X_train:")
+    print(X_train.dtypes)
+    print(X_train.head())
+
+    # Entferne Datums-Spalte, falls vorhanden
+    if 'date' in X_train.columns:
+        X_train = X_train.drop(columns=['date'])
+    if 'date' in X_test.columns:
+        X_test = X_test.drop(columns=['date'])
+
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
     X_test_scaled = scaler.transform(X_test)

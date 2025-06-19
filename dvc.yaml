@@ -38,6 +38,3 @@ stages:
       - src/models/evaluate_model.py
     outs:
       - metrics/scores.json
-
-
-			   
