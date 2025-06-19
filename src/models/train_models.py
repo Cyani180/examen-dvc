@@ -1,3 +1,4 @@
+import os
 import joblib
 import pandas as pd
 from sklearn.ensemble import GradientBoostingRegressor
@@ -13,6 +14,9 @@ best_params = joblib.load("models/best_params.pkl")
 model = GradientBoostingRegressor(**best_params)
 model.fit(X_train, y_train.values.ravel())
 
-# Save model
-joblib.dump(model, "models/gradient_boosting_model.pkl")
+# Ensure models directory exists
+os.makedirs("models", exist_ok=True)
+
+# Save model with expected filename for DVC
+joblib.dump(model, "models/model.pkl")
 print("Model training completed and model saved.")
